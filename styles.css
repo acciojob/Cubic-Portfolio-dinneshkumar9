@@ -1,2 +1,118 @@
 
 /* Your CSS Code here. */
+.cube {
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    animation: rotate 8s infinite linear;
+    }
+    
+    .face {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    border: 1px solid black;
+    }
+    
+    .front {
+    transform: rotateY(0deg) translateZ(100px);
+    background-color: #f9a825;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    
+    .back {
+    transform: rotateY(180deg) translateZ(100px);
+    background-color: #f9a825;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    
+    .top {
+    transform: rotateX(90deg) translateZ(100px);
+    background-color: #4dd0e1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    
+    .bottom {
+    transform: rotateX(-90deg) translateZ(100px);
+    background-color: #4dd0e1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    
+    .left {
+    transform: rotateY(-90deg) translateZ(100px);
+    background-color: #26a69a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    
+    .right {
+    transform: rotateY(90deg) translateZ(100px);
+    background-color: #26a69a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    
+    @keyframes rotate {
+    from { transform: rotateX(0deg) rotateY(0deg); }
+    to { transform: rotateX(360deg) rotateY(360deg); }
+    }
+    
+    /* Content inside the cube */
+    .front:before {
+    content: "Hobbies:";
+    font-weight: bold;
+    }
+    .front:after {
+    content: "reading, hiking, photography";
+    }
+    
+    .back:before {
+    content: "Skills:";
+    font-weight: bold;
+    }
+    .back:after {
+    content: "web development, graphic design, project management";
+    }
+    
+    .top:before {
+    content: "Likes:";
+    font-weight: bold;
+    }
+    .top:after {
+    content: "travel, coffee, music";
+    }
+    
+    .bottom:before {
+    content: "Dislikes:";
+    font-weight: bold;
+    }
+    .bottom:after {
+    content: "spicy food, loud noises, being rushed";
+    }
+
+    .left:before {
+        content: "Name:";
+        font-weight: bold;
+    }
+    .left:after{
+        content: "Dinesh Kumar";
+    }
+
+    .right:before {
+        content: "Games:";
+        font-weight: bold;
+    }
+    .right:after{
+        content: "GTA 5, Need for Speed";
+    }
